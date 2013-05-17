@@ -1,0 +1,30 @@
+<div id='links'>
+<p><a href='/posts_index'>View all logs</a></p>
+<p><a href='http://www.toilette-humor.com/'>Toilet Humor</a></p>
+<form action='/post_show' method='get'>
+
+</div>
+
+<div class="container">
+  <h1>Welcome to Poop log!</h1>
+  <p>The #2™ site for flushing out your bowels for the world to see!</p>
+
+  <p>Give it a whirl now!
+
+  <div id='errors'>
+    <% if @errors %>
+      <% @errors.full_messages.each do |error| %>
+      <%= error %>
+      <% end %>
+    <% end %>
+  </div>
+  
+  <form action='/created_post' method='post'>
+    <p><input type="text" name="title" placeholder="Title" required>
+    <p><textarea name="body" form="create_a_blog" cols=35 rows=15 placeholder="Insert crap here..." required>
+    </textarea>
+    <p><input type="text" name="tags" placeholder="Optional tags">
+    <p><input type="submit" value="Post it!">
+  </form>
+  
+</div>
