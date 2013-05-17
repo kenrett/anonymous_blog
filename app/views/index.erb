@@ -1,7 +1,15 @@
 <div id='links'>
-<p><a href='/posts_index'>View all logs</a></p>
-<p><a href='http://www.toilette-humor.com/'>Toilet Humor</a></p>
+<p><a href='/posts_index' class="styled-button-2">View All Logs</a></p>
+<p><a href='http://www.toilette-humor.com/' class="styled-button-2">Toilet Humor</a></p>
 <form action='/post_show' method='get'>
+  <input type='text' name='link_to_get' placeholder='Enter # of post to view'><p>
+  <input type='submit' value='Get that $hit!' class="styled-button">
+</form>
+
+<form action='/post_show' method='get'>
+  <input type='text' name='tag_to_get' placeholder='Search By Tag'><p>
+  <input type='submit' value='Search Tags' class="styled-button">
+</form>
 
 </div>
 
@@ -19,12 +27,12 @@
     <% end %>
   </div>
   
-  <form action='/created_post' method='post'>
+  <form action='/created_post' method='post' name='create_a_blog'>
     <p><input type="text" name="title" placeholder="Title" required>
     <p><textarea name="body" form="create_a_blog" cols=35 rows=15 placeholder="Insert crap here..." required>
     </textarea>
     <p><input type="text" name="tags" placeholder="Optional tags">
-    <p><input type="submit" value="Post it!">
+    <p><input type="submit" value="Post it!" class="styled-button">
   </form>
   
 </div>
